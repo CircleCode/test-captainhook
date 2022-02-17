@@ -1,0 +1,5 @@
+services:
+  app:
+    user: '1000:998'
+    environment:
+      CUSTOM_VAR: "test"

@@ -1,0 +1,6 @@
+services:
+  app:
+    image: chialab/php-dev:7.4
+    volumes:
+      - ../:/app:cached
+    working_dir: '/app/subdir/'

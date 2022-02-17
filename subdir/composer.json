@@ -1,0 +1,14 @@
+{
+    "name": "circlecode/captainhook",
+    "type": "project",
+    "require-dev": {
+        "captainhook/captainhook": "^5.10",
+        "captainhook/plugin-composer": "^5.3"
+    },
+    "autoload": {
+        "psr-4": {
+            "Circlecode\\Captainhook\\": "src/"
+        }
+    },
+    "require": {}
+}

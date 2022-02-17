@@ -1,0 +1,50 @@
+{
+    "config": {
+        "git-directory": "../.git/",
+        "run-mode": "docker",
+        "run-exec": "docker compose -f subdir/docker-compose.yaml -f subdir/docker-compose.custom.yaml run --rm --no-deps -w '/app/' app",
+        "plugins": [
+            {
+                "plugin": "\\CaptainHook\\App\\Plugin\\Hook\\PreserveWorkingTree"
+            }
+        ]
+    },
+    "pre-push": {
+        "enabled": false,
+        "actions": []
+    },
+    "pre-commit": {
+        "enabled": true,
+        "actions": [
+            {
+                "action": "\\CaptainHook\\App\\Hook\\PHP\\Action\\Linting",
+                "options": [],
+                "conditions": []
+            }
+        ]
+    },
+    "prepare-commit-msg": {
+        "enabled": false,
+        "actions": []
+    },
+    "post-commit": {
+        "enabled": false,
+        "actions": []
+    },
+    "post-merge": {
+        "enabled": false,
+        "actions": []
+    },
+    "post-checkout": {
+        "enabled": false,
+        "actions": []
+    },
+    "post-rewrite": {
+        "enabled": false,
+        "actions": []
+    },
+    "post-change": {
+        "enabled": false,
+        "actions": []
+    }
+}
